@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // ─── SUPABASE CONFIG ─────────────────────────────────────────────────────────
 const SUPABASE_URL = "https://prcuqxnrlbatoyhicfoa.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByY3VxeG5ybGJhdG95aGljZm9hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA1ODIwNjcsImV4cCI6MjA1NjE1ODA2N30.9hIiwicm9sZSI6ImFub24ifQ";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByY3VxeG5ybGJhdG95aGljZm9hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5MjU1MDAsImV4cCI6MjA4NzUwMTUwMH0.toGHIR_Gh_kzSyqg-4duLRKT6z_EkDvTPPo-7a_LJ00";
 
 async function supabase(method, path, body) {
   const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
