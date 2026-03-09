@@ -618,7 +618,7 @@ function Step1({ data, setData, onNext, onBack }) {
       <div className="field"><label>Your name *</label><input value={data.name} onChange={e => setData({...data, name: e.target.value})} placeholder="First name" /></div>
       <div className="field"><label>Nickname (optional)</label><input value={data.nickname} onChange={e => setData({...data, nickname: e.target.value})} placeholder="What people call you" /></div>
       <div className="field"><label>Email address *</label><input type="email" value={data.email} onChange={e => setData({...data, email: e.target.value})} placeholder="you@email.com" /></div>
-      <div className="field"><label>I am a *</label><SingleChip options={["Woman","Man"]} selected={data.gender} onChange={v => setData({...data, gender: v.toLowerCase()})} /></div>
+      <div className="field"><label>I am a *</label><SingleChip options={["Woman","Man"]} selected={data.gender === "woman" ? "Woman" : data.gender === "man" ? "Man" : ""} onChange={v => setData({...data, gender: v.toLowerCase()})} /></div>
       <div className="field"><label>What are you wearing tonight? *</label><input value={data.wearing} onChange={e => setData({...data, wearing: e.target.value})} placeholder="e.g. green blazer, black dress" /></div>
       <div className="row-2">
         <div className="field"><label>Your age *</label><input type="number" value={data.age} onChange={e => setData({...data, age: e.target.value})} placeholder="e.g. 28" /></div>
